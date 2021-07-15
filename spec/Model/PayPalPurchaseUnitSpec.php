@@ -45,7 +45,7 @@ final class PayPalPurchaseUnitSpec extends ObjectBehavior
         $shippingAddress->getPostcode()->willReturn('000');
         $shippingAddress->getCountryCode()->willReturn('US');
 
-        $this->data()->shouldReturn(
+        $this->toArray()->shouldReturn(
             [
                 'reference_id' => 'REFERENCE_ID',
                 'invoice_number' => 'INVOICE_NUMBER',
@@ -110,7 +110,7 @@ final class PayPalPurchaseUnitSpec extends ObjectBehavior
             $shippingAddress
         );
 
-        $this->data()->shouldReturn(
+        $this->toArray()->shouldReturn(
             [
                 'reference_id' => 'REFERENCE_ID',
                 'invoice_number' => 'INVOICE_NUMBER',
@@ -164,7 +164,7 @@ final class PayPalPurchaseUnitSpec extends ObjectBehavior
             null
         );
 
-        $this->data()->shouldReturn(
+        $this->toArray()->shouldReturn(
             [
                 'reference_id' => 'REFERENCE_ID',
                 'invoice_number' => 'INVOICE_NUMBER',
